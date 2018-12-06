@@ -1,0 +1,28 @@
+<h1>Congratulations on your purchase!</h1>
+
+<p>
+ <div class="order-summary jumbotron">
+    <% total_price = 0 %>
+    <% @order.line_items.each do |item|%>
+      <tr>
+        <td>
+          <h4><%= item.product.name %></h4>
+          <br>
+        <br>
+          <p><%= item.product.description %></p>
+        </td>
+         <br>
+        <td>
+          Quantity: <%= item.quantity %>
+        </td>
+        <br>
+        <td>Price:
+          <%= item.product.price * item.quantity %>
+          <% total_price += (item.product.price * item.quantity) %>
+        </td>
+      </tr>
+    <% end %>
+    <h1>Order Total: <%= total_price %></h1>
+    <h4>Thank you for your order</h4>
+  </div>
+</p>
