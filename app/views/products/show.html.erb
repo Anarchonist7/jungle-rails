@@ -26,7 +26,6 @@
         <div>
           <h2>Post a review!</h2>
           <%= form_for [@product, Review.new] do |f| %>
-
            <%= f.select(:rating, options_for_select([['1 star', 1], ['2 stars', 2], ['3 stars'], ['4 stars'], ['5 stars']])) %>
            <%= f.text_field :description %>
            <%= f.submit %>
