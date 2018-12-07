@@ -23,6 +23,24 @@
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
         </dl>
+        <div>
+          <h2>Post a review!</h2>
+          <%= form_for [@product, Review.new] do |f| %>
+
+           <%= f.select(:rating, options_for_select([['1 star', 1], ['2 stars', 2], ['3 stars'], ['4 stars'], ['5 stars']])) %>
+           <%= f.text_field :description %>
+           <%= f.submit %>
+          <% end %>
+        </div>
+        <br>
+        <div>
+          <% @product.reviews.each do |review| %>
+            <p>Posted by: <b><%= review.user.name %></b></p>
+            <p>Rating: <b><%= review.rating %>/5 stars</b></p>
+            <p><%= review.description %></p>
+            <br>
+          <% end %>
+        </div>
       </div>
     </div>
 

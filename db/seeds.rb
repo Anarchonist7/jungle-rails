@@ -29,6 +29,7 @@ cat1 = Category.find_or_create_by! name: 'Apparel'
 cat2 = Category.find_or_create_by! name: 'Electronics'
 cat3 = Category.find_or_create_by! name: 'Furniture'
 
+
 ## PRODUCTS
 
 puts "Re-creating Products ..."
@@ -75,7 +76,7 @@ cat1.products.create!({
   price: 1_225.00
 })
 
-cat1.products.create!({
+shoes = cat1.products.create!({
   name:  'Human Feet Shoes',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel6.jpg'),
@@ -132,5 +133,20 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+user1 = User.create({
+  name: 'thoth',
+  password: 'egypt'
+})
 
+shoes.reviews.create({
+  user: user1,
+  description: 'this shit sucks yo',
+  rating: 1
+})
+
+shoes.reviews.create({
+  user: user1,
+  description: 'this shit really sucks yo, just sayin',
+  rating: 1
+})
 puts "DONE!"
