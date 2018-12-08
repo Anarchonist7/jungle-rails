@@ -41,11 +41,11 @@
             <p>Rating: <b><%= review.rating %>/5 stars</b></p>
             <p><%= review.description %></p>
               <% if current_user %>
-                <% if current_user.name == review.user.name %>
+                <% if current_user.id == review.user_id %>
                   <%= button_to 'delete', product_review_path(@product.id, review.id), method: :delete, class: 'btn btn-xs btn-danger' %>
-                </div>
                 <% end %>
               <% end %>
+              </div>
             <br>
           <% end %>
         </div>
