@@ -75,6 +75,24 @@ main section.categories-show {
   }
 }
 
+.log {
+  position: relative;
+  left: 15px;
+  top: 15px;
+  bottom: 15px;
+  text-align: auto;
+}
+
+.review-form {
+  margin-left: 15%;
+
+  .review {
+    border: 5px solid black;
+    border-radius: 5px;
+    padding: 2px;
+  }
+}
+
 main section.products-show {
 
   .product-detail {
