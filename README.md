@@ -2,6 +2,11 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Screenshots
+
+![Home Page](https://raw.githubusercontent.com/Anarchonist7/jungle-rails/master/docs/Screen%20Shot%202018-12-07%20at%207.14.10%20PM.png)
+
+![Product Page](https://raw.githubusercontent.com/Anarchonist7/jungle-rails/master/docs/Screen%20Shot%202018-12-07%20at%207.15.03%20PM.png)
 
 ## Setup
 
