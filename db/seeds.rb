@@ -134,7 +134,8 @@ cat3.products.create!({
 })
 
 user1 = User.create({
-  name: 'thoth',
+  first_name: 'thoth',
+  last_name: 'writing',
   password: 'egypt'
 })
 
